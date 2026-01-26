@@ -18,6 +18,7 @@ pnpm lint     # Run ESLint
 
 - `lib/encoder/` - Encoding logic (base64, url, hex). Each algorithm in separate file, unified export via `index.ts`
 - `lib/hash/` - Hash algorithm metadata (display names, output lengths)
+- `lib/id/` - ID generation logic (UUID v4/v7, ULID, NanoID, CUID)
 - `lib/file.ts` - File utilities (fileToBytes)
 - `actions/hash.ts` - Server Action for all hash computations (MD5, SHA-1/256/384/512) using Node.js crypto
 - `components/ui/` - Base components (Button, Textarea, Card, Tabs) following shadcn/ui pattern

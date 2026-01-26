@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Code2, Hash, ArrowRight } from 'lucide-react'
+import { Code2, Hash, KeyRound, ArrowRight } from 'lucide-react'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { PageContainer } from '@/components/layout/page-container'
 
@@ -15,6 +15,12 @@ const features = [
     description: 'Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes',
     href: '/hash',
     icon: Hash,
+  },
+  {
+    title: 'ID Generator',
+    description: 'Generate UUID v4, UUID v7, ULID, NanoID, and CUID',
+    href: '/id',
+    icon: KeyRound,
   },
 ]
 

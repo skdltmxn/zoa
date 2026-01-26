@@ -15,3 +15,11 @@ export interface EncoderResult {
   output: string
   error?: string
 }
+
+export type IdFormat = 'uuidv4' | 'uuidv7' | 'ulid' | 'nanoid' | 'cuid'
+
+export interface IdFormatMetadata {
+  name: IdFormat
+  displayName: string
+  description: string
+}
