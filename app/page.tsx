@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Code2, Hash, KeyRound, ArrowRight } from 'lucide-react'
+import { Code2, Hash, KeyRound, Type, ArrowRight } from 'lucide-react'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { PageContainer } from '@/components/layout/page-container'
 
@@ -21,6 +21,12 @@ const features = [
     description: 'Generate UUID v4, UUID v7, ULID, NanoID, and CUID',
     href: '/id',
     icon: KeyRound,
+  },
+  {
+    title: 'String Transformer',
+    description: 'Transform strings with case conversion, sorting, and more',
+    href: '/strings',
+    icon: Type,
   },
 ]
 

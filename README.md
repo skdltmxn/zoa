@@ -7,6 +7,7 @@ A fast, privacy-focused web utility toolkit for developers.
 - **Encoder / Decoder** - Convert text between Base64, URL, and Hex encoding formats
 - **Hash Generator** - Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes
 - **ID Generator** - Generate UUID v4, UUID v7, ULID, NanoID, and CUID
+- **String Transformer** - Transform strings with case conversion, sorting, and more
 
 ## Privacy
 
