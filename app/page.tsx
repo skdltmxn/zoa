@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Code2, Hash, KeyRound, Type, ArrowRight } from 'lucide-react'
+import { Code2, Hash, KeyRound, Type, Dices, ArrowRight } from 'lucide-react'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { PageContainer } from '@/components/layout/page-container'
 
@@ -27,6 +27,12 @@ const features = [
     description: 'Transform strings with case conversion, sorting, and more',
     href: '/strings',
     icon: Type,
+  },
+  {
+    title: 'Random Generator',
+    description: 'Generate random bytes, strings, numbers, or shuffle lists',
+    href: '/random',
+    icon: Dices,
   },
 ]
 
