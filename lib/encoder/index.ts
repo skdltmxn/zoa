@@ -29,6 +29,6 @@ export function decode(algorithm: EncoderAlgorithm, input: string): EncoderResul
   }
 }
 
-export { encodeBase64, decodeBase64 } from './base64'
+export { encodeBase64, decodeBase64, encodeBase64FromHex, decodeBase64ToHex } from './base64'
 export { encodeURL, decodeURL } from './url'
 export { encodeHex, decodeHex } from './hex'

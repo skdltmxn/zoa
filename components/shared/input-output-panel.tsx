@@ -17,6 +17,7 @@ interface InputOutputPanelProps {
   outputPlaceholder?: string
   error?: string | null
   className?: string
+  inputLabelExtra?: React.ReactNode
 }
 
 export function InputOutputPanel({
@@ -30,14 +31,18 @@ export function InputOutputPanel({
   outputPlaceholder = 'Result will appear here...',
   error,
   className,
+  inputLabelExtra,
 }: InputOutputPanelProps): React.ReactElement {
   return (
     <div className={cn('space-y-4', className)}>
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <label className="text-sm font-medium text-text-secondary">
-            {inputLabel}
-          </label>
+          <div className="flex items-center gap-3">
+            <label className="text-sm font-medium text-text-secondary">
+              {inputLabel}
+            </label>
+            {inputLabelExtra}
+          </div>
           {inputValue && <CopyButton text={inputValue} />}
         </div>
         <Textarea
