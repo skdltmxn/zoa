@@ -12,7 +12,7 @@ pnpm lint     # Run ESLint
 
 ## Architecture
 
-**zoa** is a web utility toolkit (encoding/decoding, hashing) built with Next.js 16 App Router. Dark pastel theme, no light mode.
+**zoa** is a web utility toolkit (encoding/decoding, hashing, ID generation, string transformation, random value generation) built with Next.js 16 App Router. Dark pastel theme, no light mode.
 
 ### Key Directories
 
@@ -20,23 +20,15 @@ pnpm lint     # Run ESLint
 - `lib/hash/` - Hash algorithm metadata (display names, output lengths)
 - `lib/id/` - ID generation logic (UUID v4/v7, ULID, NanoID, CUID)
 - `lib/string/` - String transformation logic (case conversion, sorting, etc.)
+- `lib/random/` - Random value generators (bytes, string, number, shuffle)
 - `lib/file.ts` - File utilities (fileToBytes)
+- `lib/utils.ts` - Utility functions (`cn()` for conditional class merging)
 - `actions/hash.ts` - Server Action for all hash computations (MD5, SHA-1/256/384/512) using Node.js crypto
 - `components/ui/` - Base components (Button, Textarea, Card, Tabs) following shadcn/ui pattern
 - `components/shared/` - Feature components (CopyButton, FileUpload, HexInput, InputOutputPanel)
+- `components/layout/` - Layout components (Header, PageContainer)
+- `hooks/` - Custom React hooks (useClipboard)
 - `types/index.ts` - Shared TypeScript types
-
-### Adding New Encoder
-
-1. Create `lib/encoder/[algorithm].ts` with encode/decode functions returning `EncoderResult`
-2. Add algorithm to `EncoderAlgorithm` type in `types/index.ts`
-3. Add cases to `encode()`/`decode()` switch in `lib/encoder/index.ts`
-4. Add tab in `app/encoder/page.tsx`
-
-### Adding New Hash Algorithm
-
-1. Add to `actions/hash.ts` - all hashing uses Server Actions with Node.js crypto
-2. Update `ALGORITHM_MAP` and algorithm list in `computeAllHashes()`
 
 ### Configuration
 
@@ -52,6 +44,11 @@ pnpm lint     # Run ESLint
 
 ## Development Guidelines
 
-- Update this file (CLAUDE.md) when changes affect architecture, commands, or development workflows
+- **Keep CLAUDE.md up to date**: Always update this file when making the following changes
+  - Adding new features or pages
+  - Changing directory structure
+  - Introducing new library patterns
+  - Modifying commands
+  - Changing configuration values (body limit, file size limit, etc.)
 - Prioritize existing common components (`components/ui/`, `components/shared/`) for UI work before creating new ones
 - Maintain clear separation between UI components (client) and Server Actions (`actions/`) - avoid mixing concerns
