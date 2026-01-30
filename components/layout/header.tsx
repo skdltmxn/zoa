@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Hash, Code2, KeyRound, Type, Dices } from 'lucide-react'
+import { Hash, Code2, KeyRound, Type, Dices, Github } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navItems = [
@@ -45,6 +45,15 @@ export function Header(): React.ReactElement {
             )
           })}
         </nav>
+        <a
+          href="https://github.com/skdltmxn/zoa"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-text-secondary hover:text-text-primary transition-colors"
+          aria-label="GitHub repository"
+        >
+          <Github className="h-5 w-5" />
+        </a>
       </div>
     </header>
   )
