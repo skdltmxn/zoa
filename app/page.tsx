@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Code2, Hash, KeyRound, Type, Dices, ArrowRight } from 'lucide-react'
+import { Code2, Hash, KeyRound, Type, Dices, Braces, ArrowRight } from 'lucide-react'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { PageContainer } from '@/components/layout/page-container'
 
@@ -33,6 +33,12 @@ const features = [
     description: 'Generate random bytes, strings, numbers, or shuffle lists',
     href: '/random',
     icon: Dices,
+  },
+  {
+    title: 'JSON / YAML',
+    description: 'Format, minify, or convert between JSON and YAML',
+    href: '/json',
+    icon: Braces,
   },
 ]
 
