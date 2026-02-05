@@ -22,6 +22,7 @@ pnpm lint     # Run ESLint
 - `lib/string/` - String transformation logic (case conversion, sorting, etc.)
 - `lib/random/` - Random value generators (bytes, string, number, shuffle)
 - `lib/json/` - JSON/YAML formatting, minification, and conversion
+- `lib/time/` - Time conversion utilities (timestamp parsing, formatting, timezone handling)
 - `lib/file.ts` - File utilities (fileToBytes)
 - `lib/utils.ts` - Utility functions (`cn()` for conditional class merging)
 - `actions/hash.ts` - Server Action for all hash computations (MD5, SHA-1/256/384/512) using Node.js crypto

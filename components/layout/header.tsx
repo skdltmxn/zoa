@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Hash, Code2, KeyRound, Type, Dices, Github, Braces } from 'lucide-react'
+import { Hash, Code2, KeyRound, Type, Dices, Github, Braces, Clock } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navItems = [
@@ -12,6 +12,7 @@ const navItems = [
   { href: '/strings', label: 'Strings', icon: Type },
   { href: '/random', label: 'Random', icon: Dices },
   { href: '/json', label: 'JSON', icon: Braces },
+  { href: '/time', label: 'Time', icon: Clock },
 ]
 
 export function Header(): React.ReactElement {

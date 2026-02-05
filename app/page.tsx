@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Code2, Hash, KeyRound, Type, Dices, Braces, ArrowRight } from 'lucide-react'
+import { Code2, Hash, KeyRound, Type, Dices, Braces, Clock, ArrowRight } from 'lucide-react'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { PageContainer } from '@/components/layout/page-container'
 
@@ -39,6 +39,12 @@ const features = [
     description: 'Format, minify, or convert between JSON and YAML',
     href: '/json',
     icon: Braces,
+  },
+  {
+    title: 'Time Converter',
+    description: 'Convert Unix timestamps and dates with timezone support',
+    href: '/time',
+    icon: Clock,
   },
 ]
 
